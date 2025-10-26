@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <title>Calculadora Jurídica</title>
+    <style>
+        body { font-family: Arial; max-width: 600px; margin: 40px auto; }
+        input, button { padding: 8px; margin: 6px; width: 100%; }
+    </style>
+</head>
+<body>
+    <h2>🧮 Calculadora Jurídica</h2>
+    <form method="POST">
+        <label>Valor (R$):</label>
+        <input type="number" step="0.01" name="valor" required>
+
+        <label>Juros mensais (%):</label>
+        <input type="number" step="0.01" name="juros" required>
+
+        <label>Meses:</label>
+        <input type="number" name="meses" required>
+
+        <button type="submit">Calcular</button>
+    </form>
+
+    {% if resultado %}
+        <h3>Resultado: {{ resultado }}</h3>
+    {% endif %}
+</body>
+</html>
